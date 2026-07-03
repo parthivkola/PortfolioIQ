@@ -30,6 +30,8 @@ services:
     name: portfolio-iq-redis
     plan: free
     maxmemoryPolicy: allkeys-lru
+    ipAllowList: []
+
 
 # --- PostgreSQL ---
 databases:
@@ -37,4 +39,6 @@ databases:
     plan: free
     databaseName: portfolio_intelligence
     user: pip_user
+    ipAllowList: []
+
 
