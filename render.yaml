@@ -25,15 +25,16 @@ services:
       - key: LOG_LEVEL
         value: WARNING
 
-  # --- PostgreSQL ---
-  - type: database
-    name: portfolio-iq-db
-    plan: free
-    databaseName: portfolio_intelligence
-    user: pip_user
-
   # --- Redis ---
   - type: redis
     name: portfolio-iq-redis
     plan: free
     maxmemoryPolicy: allkeys-lru
+
+# --- PostgreSQL ---
+databases:
+  - name: portfolio-iq-db
+    plan: free
+    databaseName: portfolio_intelligence
+    user: pip_user
+
